@@ -1,6 +1,6 @@
 {
-  "name": "miniapp-cli",
-  "version": "1.0.0",
+  "name": "generator-enzomi",
+  "version": "0.0.1",
   "description": "HOPE partner and micro cli",
   "main": "index.js",
   "bin": {
@@ -14,21 +14,29 @@
     "url": "git+https://github.com/lorenzohee/miniapp-cli.git"
   },
   "keywords": [
-    "cli"
+    "cli",
+    "yeoman-generator"
   ],
   "author": "Lorenzo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lorenzohee/miniapp-cli/issues"
   },
+  "files": [
+    "app",
+    "service"
+  ],
   "homepage": "https://github.com/lorenzohee/miniapp-cli#readme",
   "dependencies": {
+    "boxen": "^4.2.0",
     "chalk": "^3.0.0",
     "commander": "^4.1.0",
     "download-git-repo": "^3.0.2",
+    "glob": "^7.1.6",
     "handlebars": "^4.7.2",
     "inquirer": "^7.0.3",
     "log-symbols": "^3.0.0",
-    "ora": "^4.0.3"
+    "ora": "^4.0.3",
+    "yeoman-generator": "^4.12.0"
   }
 }
