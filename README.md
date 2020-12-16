@@ -2,16 +2,14 @@
 
 hope partner and miscro cli
 
-### 下载 git
+#### 下载 git
 
     git clone https://github.com/lorenzohee/miniapp-cli.git
 
-### 设置为全局运行命令
+#### 设置为全局运行命令
 
-在项目目录下运行：
-npm install . -g
-// 或
-npm link
+在项目目录下运行： `npm install . -g` 或 `npm link`
+
 这样就可以使用 enzomi 命令了。
 
 到此，一个本地的 npm 命令行工具就已经成功完成
