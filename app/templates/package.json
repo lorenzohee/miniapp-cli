@@ -1,0 +1,18 @@
+{
+  "name": "xxx",
+  "version": "0.0.1",
+  "description": "xxx项目",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xxx"
+  ],
+  "author": "lorenzo",
+  "license": "MIT",
+  "dependencies": {
+    "miniprogram-api-promise": "^1.0.4",
+    "miniprogram-computed": "^2.2.0"
+  }
+}

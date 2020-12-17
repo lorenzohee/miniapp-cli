@@ -18,7 +18,7 @@ module.exports = class extends Generator {
     super(args, opts);
 
     // This makes `appname` a required argument.
-    this.argument('appname', { type: String, required: true });
+    this.argument('projectname', { type: String, required: true });
   }
 
   // Your initialization methods (checking current project state, getting configs, etc)
@@ -33,7 +33,7 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'description',
         message: '请输入项目描述：',
-        default: this.options.appname, // Default to current folder name
+        default: this.options.projectname, // Default to current folder name
       },
       {
         type: 'input',
@@ -51,14 +51,14 @@ module.exports = class extends Generator {
   // Saving configurations and configure the project
   // (creating .editorconfig files and other metadata files)
   configuring() {
-    this.copyTemplate('./app.json', `${this.options.appname}/app.json`)
-    this.copyTemplate('./app.wxss', `${this.options.appname}/app.wxss`)
-    this.copyTemplate('./app.js', `${this.options.appname}/app.js`)
-    this.copyTemplate('./sitemap.json', `${this.options.appname}/sitemap.json`)
-    this.copyTemplate('./utils', `${this.options.appname}/utils`)
-    this.copyTemplate('./vendor', `${this.options.appname}/vendor`)
-    this.copyTemplate('./pages', `${this.options.appname}/pages`)
-    this.fs.copyTpl(this.templatePath('./project.config.json'), this.destinationPath(`${this.options.appname}/project.config.json`), { projectName: this.options.appname });
+    this.copyTemplate('./app.json', `${this.options.projectname}/app.json`)
+    this.copyTemplate('./app.wxss', `${this.options.projectname}/app.wxss`)
+    this.copyTemplate('./app.js', `${this.options.projectname}/app.js`)
+    this.copyTemplate('./sitemap.json', `${this.options.projectname}/sitemap.json`)
+    this.copyTemplate('./utils', `${this.options.projectname}/utils`)
+    this.copyTemplate('./vendor', `${this.options.projectname}/vendor`)
+    this.copyTemplate('./pages', `${this.options.projectname}/pages`)
+    this.fs.copyTpl(this.templatePath('./project.config.json'), this.destinationPath(`${this.options.projectname}/project.config.json`), { projectName: this.options.projectname });
   }
 
   // - If the method name doesn’t match a priority, it will be pushed to this group.
@@ -105,7 +105,7 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'name',
         message: 'Your project name',
-        default: this.appname, // Default to current folder name
+        default: this.options.projectname, // Default to current folder name
       },
       {
         type: 'confirm',

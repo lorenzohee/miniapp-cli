@@ -1,0 +1,34 @@
+<!--pages/auth/auth.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">登录</view>
+</cu-custom>
+<view class="padding">
+  <view style="text-align: center; margin: 40px;">
+    <view style="width: 50px; height: 50px; border-radius: 50%;overflow: hidden; display:inline-block">
+      <open-data type="userAvatarUrl" class="image"></open-data>
+    </view>
+    <view style="transform:rotate(90deg); display:inline-block;margin: 0 20px;">
+      <text class="cuIcon-order lg text-gray" style="font-size: 48px"></text>
+    </view>
+    <image src="../../assets/images/favicon.png" style="width: 50px; height: 50px; border-radius: 50%;"></image>
+  </view>
+  <view style="margin-bottom: 30px;" class="padding-left">
+    <view class="padding-bottom-sm">xxx项目是一个面向授权用户的实名用户社区，请您务必填写您的真实个人信息并通过系统审核才可获得您专属的科技需求以及相关活动邀请</view>
+    <view class="padding-top">xxx项目申请获取以下权限：</view>
+    <text class="text-grey text-sm">申请获取你的微信个人信息以完善您的信息</text>
+    <view class="padding-top">
+      <checkbox-group bindchange="checkboxChange" style="display:inline">
+        <checkbox checked="{{agreed}}"></checkbox>
+      </checkbox-group>
+      阅读并同意<navigator url="" style="display:inline; color:blue; margin: 0 5px">隐私政策</navigator>和<navigator url="" style="display:inline; color:blue; margin: 0 5px">用户服务条款</navigator>
+    </view>
+    <view class="padding-top">
+      <checkbox-group bindchange="subscribeChange" style="display:inline">
+        <checkbox checked="checked"></checkbox>
+      </checkbox-group>
+      订阅需求及资讯推送服务，同意公众号推送相关通知。
+    </view>
+  </view>
+  <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo" class="cu-btn block bg-green margin-lr-sm lg">授权</button>
+  <navigator url="/pages/demand/demandlist" open-type="switchTab" class="cu-btn block margin-lr-sm lg margin-top" style="border: 1px solid #ddd;">拒绝</navigator>
+</view>
