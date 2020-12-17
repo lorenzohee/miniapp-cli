@@ -49,3 +49,11 @@
 微信开发者工具中开启'使用 npm 模块'
 
 ## 小程序开发说明
+
+1. 使用了 miniprogram-api-promise 模块，支持 api 的 promise 应用，已在 app.js 头文件中引入，若需要调用微信的 api 直接使用 wxp.xxx().then()即可
+
+2. 使用了 miniprogram-computed 模块，支持计算属性 computer 及监听属性 watch，具体使用规则参考微信开发者平台文档
+
+3. 本小程序基于 colorUI 开发，扩展了登录授权功能
+
+4. 未完待续
